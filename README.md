@@ -1,10 +1,10 @@
 # Party Pete AI
 
+<img width="71" height="90" alt="party_pete_chathead" src="https://github.com/user-attachments/assets/ab618ee1-2ddf-4322-8b9c-1154c84aeb18" /> <br/>
+
 Party Pete AI is a read-only RuneLite sidebar assistant for questions about Old School RuneScape. It can explain quests, bosses, raids, skills, equipment, minigames, account progression, money making, lore, and OSRS-related RuneLite features. It never clicks, types into the game, moves the player, or automates gameplay.
 
-<img width="360" height="1012" alt="Screenshot_6" src="https://github.com/user-attachments/assets/039f0703-c9ab-4b3c-8e76-aec8d61bed5d" /> <br />
-<img width="345" height="400" alt="Screenshot_3" src="https://github.com/user-attachments/assets/e7f63f53-f71d-44a9-831f-cc5d43f18c63" /> <br />
-<img width="355" height="1019" alt="Screenshot_2" src="https://github.com/user-attachments/assets/1ee2c225-02e5-4a15-ae88-c463911f8289" />
+<img width="1064" height="1012" alt="New Project" src="https://github.com/user-attachments/assets/951cd353-8cb9-44cf-80d5-c5dd01561f23" />
 
 ## Features
 
