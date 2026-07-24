@@ -2,9 +2,10 @@
 
 Party Pete AI is a read-only RuneLite sidebar assistant for questions about Old School RuneScape. It can explain quests, bosses, raids, skills, equipment, minigames, account progression, money making, lore, and OSRS-related RuneLite features. It never clicks, types into the game, moves the player, or automates gameplay.
 
-> Screenshot placeholder: Party Pete welcome panel  
-> Screenshot placeholder: provider and privacy settings  
-> Screenshot placeholder: an OSRS answer with steps and safe links
+<img width="362" height="1019" alt="Screenshot_1" src="https://github.com/user-attachments/assets/94cbbc31-d374-4941-95ef-a82aa5165503" />
+<img width="360" height="1012" alt="Screenshot_6" src="https://github.com/user-attachments/assets/039f0703-c9ab-4b3c-8e76-aec8d61bed5d" />
+<img width="345" height="400" alt="Screenshot_3" src="https://github.com/user-attachments/assets/e7f63f53-f71d-44a9-831f-cc5d43f18c63" />
+<img width="355" height="1019" alt="Screenshot_2" src="https://github.com/user-attachments/assets/1ee2c225-02e5-4a15-ae88-c463911f8289" />
 
 ## Features
 
@@ -51,57 +52,6 @@ The assistant is only for OSRS and OSRS-focused comparisons with RuneScape 3. Un
 
 Answers are generated and can be wrong. Live Wiki grounding and Grand Exchange prices are available as separate opt-in settings. When disabled or when a lookup fails, current prices, recent updates, changing drop rates, and other time-sensitive details should still be checked against the [OSRS Wiki](https://oldschool.runescape.wiki/) or official update notes.
 
-## Development
-
-Requirements:
-
-- JDK 11 or newer (the bytecode target is Java 11).
-- Git.
-- Network access to RuneLite's Maven repository on the first build.
-
-Run the unit tests:
-
-```text
-./gradlew test
-```
-
-Build the plugin:
-
-```text
-./gradlew clean build
-```
-
-Launch a development RuneLite client:
-
-```text
-./gradlew run
-```
-
-On Windows, use `gradlew.bat` in place of `./gradlew`. Jagex account users should follow RuneLite's [development-client login guide](https://github.com/runelite/runelite/wiki/Using-Jagex-Accounts).
-
-Tests use local mock HTTP servers and never contact an AI provider. No real key is needed.
-
-## Architecture
-
-- `ai`: provider interface, factory, dedicated request builders/parsers, errors, cancellation.
-- `chat`: messages, memory, prompt, scope parsing, local safety rules.
-- `context`: client-thread-safe, opt-in player context capture.
-- `ui`: escaped lightweight renderer and Swing chat panel.
-- `config`: provider/model registries and response controls.
-
-Provider streaming integrations are isolated behind `AiProvider`. Live Wiki grounding implements `OsrsKnowledgeSource`, while Grand Exchange lookups use the OSRS Wiki price API.
-
-## Plugin Hub submission
-
-The project follows the current `runelite/example-plugin` Java 11 layout and uses `build=standard`. Before submission:
-
-1. Publish this repository publicly.
-2. Run `./gradlew clean test build`.
-3. Test the sidebar and each provider in a development client.
-4. Create a Plugin Hub manifest entry containing the public repository URL and the full commit hash.
-5. Open a pull request to `runelite/plugin-hub` and address automated/reviewer feedback.
-
-The root `icon.png` is 48×48, within the Plugin Hub limit. The only production dependencies are already supplied by RuneLite. Artwork and prompts are bundled locally; no code or assets are downloaded at runtime.
 
 ## Known limitations
 
